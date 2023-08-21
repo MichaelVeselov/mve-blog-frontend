@@ -147,7 +147,7 @@ export const SinglePostPage = () => {
               >
                 {post.imgUrl && (
                   <img
-                    src={`${process.env.VITE_APP_API_URL}/${post.imgUrl}`}
+                    src={`${import.meta.env.VITE_APP_API_URL}/${post.imgUrl}`}
                     alt='img'
                     className='object-cover w-full'
                   />

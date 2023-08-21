@@ -26,7 +26,7 @@ export const EditPostPage = () => {
     defaultValues: async () => {
       const { data } = await axios.get(`/posts/${postId}`);
       data.post.imgUrl &&
-        setImageUrl(`${process.env.VITE_APP_API_URL}/${data.post.imgUrl}`);
+        setImageUrl(`${import.meta.env.VITE_APP_API_URL}/${data.post.imgUrl}`);
       return {
         title: data.post.title,
         text: data.post.text,
