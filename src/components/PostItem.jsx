@@ -12,7 +12,7 @@ export const PostItem = ({ post, currentPage = '1', path = -1 }) => {
         >
           {post.imgUrl && (
             <img
-              src={`http://localhost:4000/${post.imgUrl}`}
+              src={`${process.env.VITE_APP_API_URL}/${post.imgUrl}`}
               alt={post.title}
               className='object-cover w-full'
             />
